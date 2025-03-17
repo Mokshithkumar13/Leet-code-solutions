@@ -1,0 +1,11 @@
+class Solution:
+    def countDigits(self, num: int) -> int:
+        num2 = num
+        res = 0
+        while num2 > 0:
+            lastDigit = num2 % 10
+            num2 //= 10
+            if num % lastDigit == 0:
+                res += 1
+        return res
+        
