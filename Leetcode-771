@@ -1,0 +1,6 @@
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        jewel_set = set(jewels)  # Convert jewels string to a set for quick lookup
+        count = sum(1 for stone in stones if stone in jewel_set)  # Count matching stones
+        return count
+        
